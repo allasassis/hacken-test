@@ -60,6 +60,23 @@ This Spring Boot application provides RESTful APIs for uploading and processing 
 curl -X POST -F 'file=@path/to/yourfile.csv' http://localhost:8080/api/upload
 ```
 
+### Search Data
+
+- **URL:** `/api/search`
+- **Method:** `GET`
+- **Description:** Searches the CSV data based on a query string.
+
+#### Request
+
+- **Parameters:**
+    - `query` (String): The search query.
+
+#### Example
+
+```sh
+curl -X GET 'http://localhost:8080/api/search?query=searchTerm'
+```
+
 ### Health Check
 
 - **URL:** `/actuator/health`
